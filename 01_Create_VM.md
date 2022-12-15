@@ -1,39 +1,41 @@
 # Hands-on 01 – Explore Azure GUI – Creating a new VM using Azure Portal 
 
-Azure virtual machines (VMs) can be created through the Azure portal. The Azure portal is a browser-based user interface to create Azure resources. 
-This Hands-On shows you how to use the Azure portal to deploy a Linux virtual machine (VM) running Ubuntu LTS. To see your VM in action, you also SSH to the VM and install the NGINX web server.
+The Azure portal is a browser-based user interface to create Azure resources. Azure virtual machines (VMs) can be created through the Azure portal. </br> 
+This Hands-on will guide you through using the Azure portal to deploy a Linux virtual machine (VM) running Ubuntu LTS. To see your VM in action, you also SSH to the VM and install the NGINX web server.
 
 ## Sign in to Azure
 
-Please follow the steps as detailed in session <a href="/Azure_Sandbox.md">"Setup Azure Sandbox in Pluralsight"</a> to enable Pluralsight Azure Sandbox & portal login. 
+Please follow the steps as detailed in session <a href="/Azure_Sandbox.md">"Setup Azure Sandbox in Pluralsight"</a> to enable Pluralsight Azure Sandbox & login into the. 
 
 ## Create virtual machine
 
 1. In the portal home, under <b>Services </b>, select <b>Virtual Machines </b>
     <img src="images/az_vm01.png">
-2. In the Virtual machines page, select Create and then Virtual machine. 
+2. In the Virtual machines page, click <b>Create </b> and choose <b> Azure Virtual machine. </b>
      <img src="images/az_vm02.png">
     The Create a virtual machine page opens.
     <img src="images/az_vm03.png">
 3. Under Instance details, enter a <b>name </b> for your name (Ex: VM01) for the Virtual machine name, and choose Ubuntu 20.04 LTS - Gen2 for your Image. Leave the other info to defaults. 
     <img src="images/az_vm04.png">
-4. In the Administrator account, select Authentication type “Password” option and provide the Username and Password.
-    Please make a note of your username and password.
-    Ex: username - testadm </br>
+4. In the Administrator account session, <b> select Authentication type “Password” option </b> and provide an Username and Password.
+    Please make a note of your username and password for connecting to the VM. </br>
+    Sample: </br>
+    username - testadm </br>
     Password - Pa55@Word123
     <img src="images/az_vm05.png">
-    Note: In realtime use cases, it is recommended to authenticate using SSH public keys.
-5. Under Inbound port rules > Public inbound ports, choose Allow selected ports and then select SSH (22) and HTTP (80) from the drop-down.
+    <br> Ensure to check for the green tick marks against the username & password. </br>
+    <b>Note:</b> It is recommended to authenticate using SSH public keys for security. 
+5. Under Inbound port rules > Public inbound ports, choose <b>Allow selected ports </b> and then select SSH (22) and HTTP (80) from the drop-down.
     <img src="images/vm_port.png">
-5. Leave the remaining defaults and then select the Review + create button at the bottom of the page.
-6. On the Create a virtual machine page, you can see the details about the VM you are about to create. Ensure the review returns, <b> Validation passed</b>
+6. Leave the remaining value to defaults and then select the <b> Review + create </b> button at the bottom of the page.
+7. On the Create a virtual machine page, you can see the details about the VM you are about to create. Ensure the review returns, <b> Validation passed</b> </br>
     <img src="images/az_vm06.png">
-7. When you are ready, select Create.
-8. When the deployment is finished, select Go to resource.
+8. When you are ready, select <b> Create </b>.
+9. When the deployment is finished, select <b>Go to resource </b>.</br>
     <img src="images/az_vm07.png">
-9. On the page for your new VM, select the public IP address and copy it to your clipboard.
-    <img src="images/az_vm08.png">
-    Ex: 20.106.153.73
+10. On the page for your new VM, select the public IP address and copy it to your clipboard.</br>
+    <img src="images/az_vm08.png"> </br>
+    Sample: 20.119.75.119
 
 ## Connect to virtual machine
 
