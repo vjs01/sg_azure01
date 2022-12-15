@@ -138,8 +138,8 @@ For this exercise you need the following information about the VM, </br>
     psql --host=<server_name>.postgres.database.azure.com --port=5432 --username=adminTerraform --dbname=<database_name> --set=sslmode=require --set=sslrootcert=DigiCertGlobalRootCA.crt.pem
      ```
     Replace server_name & database_name with the values noted before. </br>
-    Ex: </br>
-    psql --host=pgrefs-svr-140083£5e3483be7.postgres.database.azure.com --port=5432 --username=adminTerraform --dbname=pgrefs-db --set=sslmode=require --set=sslrootcert=DigiCertGlobalRootCA.crt.pem </br>
+    Ex: </br> psql --host=pgrefs-svr-140083f5e3483be7.postgres.database.azure.com --port=5432 --username=adminTerraform --dbname=pgrefs-db --set=sslmode=require --set=sslrootcert=DigiCertGlobalRootCA.crt.pem
+     </br>
     </b> Provide the database password when prompted. </br>
     <img src="images/conn03.png"> </br> 
 ### Working with the database
@@ -148,18 +148,18 @@ For this exercise you need the following information about the VM, </br>
     ```console
     create table inventory (id serial primary key,name varchar(50),quantity integer);
      ```
-     <img src="images/db01.png"> </br> 
+
 2. Insert a few records to the table,
     ```console
     INSERT INTO    inventory (id,name,quantity) VALUES   (1,'Samsung',135);	
     INSERT INTO    inventory (id,name,quantity) VALUES   (2,'Iphone',182);
     ```
-     <img src="images/db02.png"> </br> 
+     <img src="images/db01.png"> </br> 
 3. Verify the insert using a select statement
     ```console
-    Select * from inventory;
+    select * from inventory;
      ```
-     <img src="images/db01.png"> </br> 
+     <img src="images/db02.png"> </br> 
     You will be able to see the records in the CLI 
 4. Use <b> Exit </b> to exit out of the psql client and get to the VM shell 
 5. Use <b> Exit </b> again to exit out of the VM and get to the Azure Cloud Shell
@@ -174,18 +174,22 @@ However, please feel free to try how terraform cleans up the provisioned resourc
      ```console
     terraform plan -destroy -out main.destroy.tfplan
      ```
-     <img src="images/db01.png"> </br> 
+     <img src="images/terradestroy01.png"> </br>
+     <img src="images/terradestroy02.png"> </br>  
       This is a speculative destroy plan, to see what the effect of destroying would be.
 2. Run terraform apply to apply the execution plan.
     ```console
     terraform apply main.destroy.tfplan
      ```
+    <img src="images/terradestroy03.png"> </br>
+    Destroy takes a few minutes based on the number of resources deployed. </br>
+    <img src="images/terradestroy04.png"> </br>
     Alternatively you can directly apply to terraform with -destroy option. 
     ```console
    terraform apply -destroy
      ```
 
-Note: You can delete all resouces provisioned, by deleting the resource group in the Azure portal. 
+Note: You can also delete all resouces provisioned, by deleting the resource group in the Azure portal. 
 
 Congrats, you have completed hands-on successfully.
 
