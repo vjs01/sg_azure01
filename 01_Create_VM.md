@@ -49,24 +49,25 @@ Note that by default the port 22 for SSH is open and this lab allows the VM to b
 
 ### Configure Azure Cloud Shell
 
-1. Select the Cloud Shell icon on the Azure portal
+1. Select the Cloud Shell icon on the Azure portal (top right hand corner) </br>
    <img src="images/az_cs01.png">
-2. Select PowerShell.
+2. Select <b>PowerShell</b>. </br>
     <img src="images/az_cs02.png">
 3. Click <b> Create Storage </b>
-    <img src="images/az_cs03.png">
-    The cloud shell will be initiated
+    <img src="images/az_cs03.png"> </br>
+    The cloud shell will be initiated.
+    <img src="images/az_cs04.png"> </br>
         
 
 ### SSH into the VM
-1. At your prompt, open an SSH connection to your virtual machine. Replace the IP address with the one from your VM, and username noted previously </br>
+1. In the cloud shell, open an SSH connection to your virtual machine. Replace the IP address with the one from your VM, and username noted previously </br>
     ```sh
     ssh username@public_ip
     ```
-    Ex: ssh testadm@20.106.153.73
-2. Type <b>yes</b> to accept connection and provide password when prompted
-    <img src="images/az_csvm01.png">
-3. You are now logged into the VM
+    Ex: ssh testadm@20.119.75.119
+2. Type <b>yes</b> to accept connection and provide password when prompted </br>
+    <img src="images/az_csvm01_01.png">
+3. You are now logged into the VM terminal. </br>
      <img src="images/az_csvm02.png">
 
 ## Install web server
