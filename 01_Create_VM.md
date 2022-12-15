@@ -25,7 +25,7 @@ Please follow the steps as detailed in session <a href="/Azure_Sandbox.md">"Setu
     <img src="images/az_vm05.png">
     <br> Ensure to check for the green tick marks against the username & password. </br>
     <b>Note:</b> It is recommended to authenticate using SSH public keys for security. 
-5. Under Inbound port rules > Public inbound ports, choose <b>Allow selected ports </b> and then select SSH (22) and HTTP (80) from the drop-down.
+5. Under Inbound port rules > Public inbound ports, choose <b>Allow selected ports </b> and then select SSH (22) and HTTP (80) from the drop-down. </br>
     <img src="images/vm_port.png">
 6. Leave the remaining value to defaults and then select the <b> Review + create </b> button at the bottom of the page.
 7. On the Create a virtual machine page, you can see the details about the VM you are about to create. Ensure the review returns, <b> Validation passed</b> </br>

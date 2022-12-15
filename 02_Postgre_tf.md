@@ -77,7 +77,7 @@ Explore the files in the folder to understand the code and structure of terrafor
     terraform plan -out main.tfplan
      ```
      <img src="images/terraplan01.png"> </br> 
-     </br> Review the command output to understand the infrastructure creation. </br>
+     Review the command output to understand the infrastructure creation. </br>
      <img src="images/terraplan02.png"> </br> 
     <b> Key points: </b> </br>
     - The <b> terraform plan </b> command creates an execution plan, but doesn't execute it. Instead, it determines what actions are necessary to create the configuration specified in your configuration files. This pattern allows you to verify whether the execution plan matches your expectations before making any changes to actual resources. </br>
@@ -86,18 +86,25 @@ Explore the files in the folder to understand the code and structure of terrafor
     ```console
     terraform apply main.tfplan
      ```
-     <img src="images/terra02.png"> </br> 
+     <img src="images/terraapply01.png"> </br> 
+     <b> NOTE: </b> The infrastructure provisioning typically takes about 5 to 10 minutes. </br>
     <b> Key points: </b> </br>
      - The <b> terraform apply </b> command above assumes you previously ran <b> terraform plan -out main.tfplan</b>.
      - If you specified a different filename for the <b> -out </b> parameter, use that same filename in the call to <b> terraform apply</b>.
      - If you didn't use the <b>-out</b> parameter, call <b>terraform apply</b> without any parameters.
-3. Note down the values for the <resource_group_name>, <server_name>, and <database_name> are displayed in the terraform apply output.
+3. Note down the values for the  <server_name>, <database_name> and <databaseuser_name> are displayed in the terraform apply output. </br>
+ <img src="images/terraapply02.png"> </br>
+ Ex: </br>
+     - Db server name - "pgrefs-svr-140083£5e3483be7"
+     - Db Name - "pgrefs-db"
+     - Db Admin user - "adminTerraform" </br>
 4. The database is provisioned using a random password. Use the following command to output the password used. 
      ```console
     terraform output -json
      ```
-     <img src="images/terra02.png"> </br> 
+     <img src="images/terraapply03.png"> </br> 
      Note the password value from the file. </br>
+     Above example: !xH6IM@w
 
 ## Connect & work with the database 
 ### Connect to the database server from Azure Linux virtual machine
@@ -114,12 +121,13 @@ For this exercise you need the following information about the VM, </br>
     ssh username@ip-address
     ```
     Enter <b> Yes </b> to accept the connection & provide the password when prompted. </br>
-    <img src="images/conn01.png"> </br> 
+    <img src="images/az_csvm01_01.png"> </br> 
 2. You need to install the postgresql-client tool to be able to connect to the server.
      ```console
     sudo apt-get update
     sudo apt-get install postgresql-client
      ```
+     <img src="images/conn01.png"> </br> 
 3. Connections to the database are enforced with SSL, hence you need to download the public SSL certificate.
     ```console
     wget --no-check-certificate https://dl.cacerts.digicert.com/DigiCertGlobalRootCA.crt.pem
@@ -129,7 +137,9 @@ For this exercise you need the following information about the VM, </br>
      ```console
     psql --host=<server_name>.postgres.database.azure.com --port=5432 --username=adminTerraform --dbname=<database_name> --set=sslmode=require --set=sslrootcert=DigiCertGlobalRootCA.crt.pem
      ```
-    Replace server_name & database_name with the values noted before.
+    Replace server_name & database_name with the values noted before. </br>
+    Ex: </br>
+    psql --host=pgrefs-svr-140083£5e3483be7.postgres.database.azure.com --port=5432 --username=adminTerraform --dbname=pgrefs-db --set=sslmode=require --set=sslrootcert=DigiCertGlobalRootCA.crt.pem </br>
     </b> Provide the database password when prompted. </br>
     <img src="images/conn03.png"> </br> 
 ### Working with the database
