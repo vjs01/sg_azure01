@@ -32,9 +32,9 @@ Please follow the steps as detailed in session <a href="/Azure_Sandbox.md">"Setu
     <img src="images/az_vm06.png">
 8. When you are ready, select <b> Create </b>.
 9. When the deployment is finished, select <b>Go to resource </b>.</br>
-    <img src="images/az_vm07.png">
+    <img src="images/az_vm071.png">
 10. On the page for your new VM, select the public IP address and copy it to your clipboard.</br>
-    <img src="images/az_vm08.png"> </br>
+    <img src="images/az_vm081.png"> </br>
     Sample: 20.119.75.119
 
 ## Connect to virtual machine
