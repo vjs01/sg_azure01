@@ -77,8 +77,8 @@ To see your VM in action, install the NGINX web server. From your SSH session, u
     sudo apt-get -y update 
     sudo apt-get -y install nginx
 ```
-Use a web browser of your choice to view the default NGINX welcome page. Type the public IP address of the VM as the web address. The public IP address can be found on the VM overview page or as part of the SSH connection string you used earlier.
-    <img src="images/nginx01.png">
+Use a web browser of your choice to view the default NGINX welcome page. Type the public IP address of the VM as the web address. The public IP address can be found on the VM overview page or as part of the SSH connection string you used earlier. </br>
+    <img src="images/nginx01_01.png">
 
 
 ## Exit VM 
