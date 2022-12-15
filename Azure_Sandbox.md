@@ -7,15 +7,16 @@
     Note: SG network firewall restricts access to the Cloud sandbox environment. Hence you need to use either a personal laptop and wifi (unrestricted connectivity) or training laptop connecting to guest wifi
 ## Login to PluralSight
 
-1.  In Chrome or Edge browser, open pluralsight
+1.  In Chrome or Edge browser, open Pluralsight
     https://www.pluralsight.com
 2. Click "Sign in" from the top right corner of the page & choose the option to “Sign in to SKILLS”
     <img src="images/ps_login1.png">
-3. In the login page, enter your pluralsight username & password
+3. In the login page, enter your pluralsight username & password. Click <b> Sign in </b> to be redirected to the Pluralsight home page
     <img src="images/ps_login2.png">
-4. Click Sign 
+    Click on <b> Leave Page </b> if prompted.
 
-## Azure Sandbox
+
+## Create Azure Sandbox
 
 Pluralsight-created labs enable hands-on practice in a secure, temporary, and Pluralsight-provided environment.
 
@@ -27,23 +28,24 @@ For the purpose of this workshop we will use an Azure lab named “Create and Ma
     <img src="images/ps_search.png">
 3. Click "Start lab" to enable the sandbox 
      <img src="images/ps_lab1.png">
-4. The sandbox environment will start loading. 
-    NOTE: The sandbox environment provisioning will take a few minutes. Please be patient. Typically takes about 5 minutes. 
+4. The sandbox environment will start loading. </br>
+    <b>NOTE:</b> The sandbox environment provisioning will take a few minutes.  Typical waiting time is about 5 minutes. 
     <img src="images/ps_lab2.png">
-    once successfully provisioned, the lab will provide you with a temporary login for working with Azure. 
+    On successful provisioning, the lab will provide you with a sandbox environment & temporary login for working with Azure. 
     <img src="images/ps_lab3.png">
     Note the time remaining at the top right hand corner of the page.
 
 ## Login to Azure
-1.  In Chrome or Edge browser, open Azure Portal
-    Recommedation: Use incognito or private browsing mode for best experience.
+1.  In Chrome or Edge browser, open Azure Portal </br>
+    <b> Recommedation:</b> Use incognito or private browsing mode for best experience. </br>
     https://portal.azure.com
-2.  In the Azure login page, provide the email id and password from the lab 
+2.  In the Azure login page, provide the email id and password from the lab </br>
+<b>TIP: </b> Use copy in the lab page to copy the credentials
     <img src="images/az_login1.png">
-3.  On successful login, you will be redirected to the Azure home
+3.  On successful login, you will be redirected to the Azure portal home
     <img src="images/az_portal.png">
 
-Congrats, your Azure sandbox environment is ready to proceed with the hands-on.
+</br> <b> Congrats, your Azure sandbox environment is ready to proceed with the hands-on. </b>
 
 To create a VM in Azure using the portal follow the below link,
 
@@ -52,7 +54,8 @@ To create a VM in Azure using the portal follow the below link,
 <p align="right">(<a href="/README.md">Back to main page</a>)</p>
 
 ## Reference
-    Check out the following link for more info on Azure portal.
 
-    https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview
+Check out the following link for more info on Azure portal.
+
+https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview
 
