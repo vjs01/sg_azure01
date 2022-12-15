@@ -4,9 +4,9 @@ Azure Database for PostgreSQL Flexible Server is a managed service that you can 
 
 Hashicorp Terraform is an open-source IaC (Infrastructure-as-Code) tool for provisioning and managing cloud infrastructure. It codifies infrastructure in configuration files that describe the desired state for your topology.
 
-Terraform enables the definition, preview, and deployment of cloud infrastructure. Using Terraform, you create configuration files using HCL syntax. The HCL syntax allows you to specify the cloud provider - such as Azure - and the elements that make up your cloud infrastructure. After you create your configuration files, you create an execution plan that allows you to preview your infrastructure changes before they're deployed. Once you verify the changes, you apply the execution plan to deploy the infrastructure.
+Terraform enables the definition, preview, and deployment of cloud infrastructure. Using Terraform, you create configuration files using HCL syntax. The HCL syntax allows you to specify the cloud provider - such as Azure - and the elements that make up your cloud infrastructure. 
 
-In this hands-on, you learn how to create an Azure PostgreSQL Database using Terraform:
+In this hands-on, you learn how to create an Azure PostgreSQL Database using Terraform through the following steps: </br>
 
 * Configure Terraform in Azure Cloud Shell with Azure PowerShell
 * Clone repository 
@@ -16,14 +16,9 @@ In this hands-on, you learn how to create an Azure PostgreSQL Database using Ter
 * Clean Up resources
 
 ## Prerequisite
-This hands-on is in continuation with the previous hands-on to create VM
+This hands-on is in continuation with the previous hands-on to create VM - 
 <a href="/01_Create_VM.md">Hands-on 01 – Explore Azure GUI – Creating a new VM using Azure Portal</a> <br/>
 Please ensure the same is completed and you are in the same sandbox environment. 
-##  Reference
-To explore more info about Terraform on Azure,
-
-https://learn.microsoft.com/en-us/azure/developer/terraform/overview
-
 ## Configure Terraform in Azure Cloud Shell with Azure PowerShell
 
 1. If you already have a Cloud Shell session open from the previous hands-on, skip to step 3
@@ -54,18 +49,18 @@ https://learn.microsoft.com/en-us/azure/developer/terraform/overview
 
 ## Clone repository 
 
-1. Clone the code to create an Azure PostgreSQL Database using Terraform using the below code.
+1. Clone the code to create an Azure PostgreSQL Database using Terraform using the below code. </br>
     ```console
-    git clone https://github.com/vjs01/SG-PPS-Azure-Workshop_Vj
+    git clone https://github.com/vjs01/sg_azure01
      ```
      <img src="images/clone01.png">
-2. Navigate to the clone directory and verify the tf files
+2. Navigate to the cloned directory and verify the tf files used for resources provisioning to deploy a postgre server in Azure. 
     ```console
-    cd SG-PPS-Azure-Workshop_Vj/terraform 
+    cd ./sg_azure01/terraform/ 
      ```
      <img src="images/clone02.png">
 
-Explore the files in the folder to understand the code and structure of terraform provisioning.
+Explore the files in the folder to understand the code and structure of terraform provisioning.</br>
 
 ## Initialise terraform provider
 
@@ -74,14 +69,16 @@ Explore the files in the folder to understand the code and structure of terrafor
     terraform init
      ```
      <img src="images/terra01.png">
-
+2. Ensure Terraform is successfully initialized.
 ## Create & Apply a Terraform execution plan
 
 1. Run terraform plan to create an execution plan.
     ```console
     terraform plan -out main.tfplan
      ```
-     <img src="images/terra01.png"> </br> 
+     <img src="images/terraplan01.png"> </br> 
+     </br> Review the command output to understand the infrastructure creation. </br>
+     <img src="images/terraplan02.png"> </br> 
     <b> Key points: </b> </br>
     - The <b> terraform plan </b> command creates an execution plan, but doesn't execute it. Instead, it determines what actions are necessary to create the configuration specified in your configuration files. This pattern allows you to verify whether the execution plan matches your expectations before making any changes to actual resources. </br>
     - The </b> optional -out parameter </b> allows you to specify an output file for the plan. Using the -out parameter ensures that the plan you reviewed is exactly what is applied.
@@ -185,6 +182,10 @@ Congrats, you have completed hands-on successfully.
 <p align="right">(<a href="/README.md">Back to main page</a>)</p>
 
 ## Reference
+To explore more info about Terraform on Azure,
+
+https://learn.microsoft.com/en-us/azure/developer/terraform/overview
+
 To explore more about provisioning with terraform, visit
 
 https://developer.hashicorp.com/terraform/cli/run
