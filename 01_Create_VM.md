@@ -99,8 +99,9 @@ To explore Infrastructure as Code using Terraform and Create an Azure PostgreSQL
 <p align="right">(<a href="/README.md">Back to main page</a>)</p>
 
 ## Reference
-    To explore more info on managing VM's in Azure refer,
+To explore more info on managing VM's in Azure refer,
 
-    https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm
-    https://learn.microsoft.com/en-us/azure/virtual-machines/overview
+ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm
+
+ https://learn.microsoft.com/en-us/azure/virtual-machines/overview
     
